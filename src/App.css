@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+
+.header {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 35px 0;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #cbd5e1;
+}
+
+/* Gallery */
+
+.gallery-section {
+  padding: 50px 0;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+
+.photo-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-6px);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-info {
+  padding: 18px;
+}
+
+.photo-info h3 {
+  font-size: 17px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.photo-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Loading */
+
+.loading {
+  text-align: center;
+  font-size: 22px;
+  padding: 80px;
+}
+
+/* Footer */
+
+.footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 92%;
+  }
+}
